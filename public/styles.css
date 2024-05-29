@@ -179,7 +179,7 @@ main {
     width: max-content;
     margin-top: 2rem;
 }
-.aboutus-div,.team-div,.contact-div{
+.aboutus-div,.team-div{
     margin-top: 8rem;
     margin-left: 6.5rem;
 }
@@ -249,10 +249,13 @@ main {
     width: 100%;
     height: 100%;
 }*/
-.main-div{
+.flex-div>.main-div{
     display:flex;
     flex-direction: row ;
     justify-content: start ;
+}
+.flex-div{
+    width: 100%;
 }
 @media (max-width: 500px){
     .nav-bar {
@@ -266,7 +269,7 @@ main {
 }
 @media (max-width: 900px){
 
-    .main-div{
+    .flex-div>.main-div{
         display:flex;
         flex-direction: column ;
         align-items: center;
