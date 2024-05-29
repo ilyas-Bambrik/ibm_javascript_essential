@@ -8,7 +8,7 @@ document.getElementById("clear-btn").addEventListener("click",()=>{
 document.getElementById('search-btn')
 .addEventListener("click",()=>{
     resulsection.innerHTML=""
-    const searchkeyword=document.getElementById("search-input").value
+    const searchkeyword=document.getElementById("search-input").value.toLowerCase()
     fetch("./travel_recommendation.json")
     .then(data=>data.json())
     .then(jsdata=>{
