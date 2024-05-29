@@ -8,7 +8,8 @@ document.getElementById("clear-btn").addEventListener("click",()=>{
 document.getElementById('search-btn')
 .addEventListener("click",()=>{
     resulsection.innerHTML=""
-    const searchkeyword=document.getElementById("search-input").value.toLowerCase()
+    let searchkeyword=document.getElementById("search-input").value.toLowerCase()
+    searchkeyword = ({"beach":"beaches","temple":"temples","country":"countries"})[searchkeyword]
     fetch("./travel_recommendation.json")
     .then(data=>data.json())
     .then(jsdata=>{
